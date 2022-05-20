@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>준기</title>
+    <style>
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="board">
+        손준기 만들기<br>
+        가로를 입력하세요 : <input type="number" id="txt1"><br>
+        세로를 입력하세요 : <input type="number" id="txt2"><br>
+        <button id="submit">enter</button>
+    </div>
+
+    <script>
+        const b = document.getElementById("submit");
+        b.addEventListener("click", makeBoard);
+        
+        function makeBoard() {
+            let a1 = parseInt(document.getElementById("txt1").value);
+            let a2 = parseInt(document.getElementById("txt2").value);
+            let tableEle = "<table>";
+            for(let i = 0; i < a1; i++) {
+                tableEle += "<tr>";
+                for(let j = 0; j < a2; j++) {
+                    tableEle += "<td><img src='jungi.png' width='120' height='160'></td>";
+                }
+                tableEle += "</tr>";
+            }
+            tableEle += "</tr>";
+            document.getElementById("board").innerHTML = tableEle;
+        }
+    </script>
+
+</body>
+
+</html>
