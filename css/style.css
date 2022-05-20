@@ -2,13 +2,18 @@
     text-align: center;
 }
 
+.image {
+    width: 120px;
+    height: 160px;
+}
+
 body {
     background-image: url('../img/blured.png');
     background-size: cover;
 }
 
 td {
-    border: 1px solid black;
+    border: 2px solid black;
     border-collapse: collapse;
 }
 
