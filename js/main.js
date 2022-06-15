@@ -3,19 +3,19 @@ b.addEventListener("click", makeBoard);
 
 const btn = document.getElementsByClassName("btn_image");
 
-let clickSaying = new Array("맞다고 해!", "가까운 창문으로 가세요", "숨 참아!", "호오옹", "나는 준기!", "이거 모르면 사람 아니죠?");
+let clickSaying = new Array("맞다고 해!", "가까운 창문으로 가세요", "빨리 숨 참아!", "호오오옹", "나는 준기!", "이거 모르면 사람 아니죠?", "큰 힌트 줄까 작은 힌트 줄까?");
 
 function makeBoard() {
     let a1 = parseInt(document.getElementById("txt1").value);
     let a2 = parseInt(document.getElementById("txt2").value);
     let tableEle = "<table>";
 
-    let arrImage = new Array("img/jungi-1.png", "img/jungi-2.jpg");
+    let arrImage = new Array("img/jungi-1.png", "img/jungi-2.jpg", "img/jungi-3.jpg");
 
     for(let i = 0; i < a2; i++) {
         tableEle += "<tr>";
         for(let j = 0; j < a1; j++) {
-            let imageCnt = 2; 
+            let imageCnt = arrImage.length; 
             let randIntTable = makeRandInt(0, imageCnt - 1);
             let currentImg = arrImage[randIntTable];
             tableEle += `<td><button type="button" class="btn_image"><img src=${currentImg} class="image">`;
