@@ -3,17 +3,28 @@
 
 <head>
     <meta charset="utf-8">
-    <title>준기</title>
+
+    <!-- google font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"/>
+
+    <title>준기</title>
 </head>
 
 <body>
     <br>
     <div id="board">
-        <h1>준기쌤 만들기</h1><br>
-        가로 길이를 입력하세요 : <input type="number" id="txt1"><br>
-        세로 길이를 입력하세요 : <input type="number" id="txt2"><br><br>
+        <h1 id="title">준기쌤 만들기</h1><br><br>
+        <div id="inputMakingText">
+        가로 길이를 입력하세요 : <input type="number" class="input" id="txt1"><br>
+        세로 길이를 입력하세요 : <input type="number" class="input" id="txt2"><br><br><br>
+        </div>
         <button id="submit">만들기!</button>
+    </div>
+    <div id="info">
+        © 2022 다원엘리트 수학학원 All Rights Reserved
     </div>
     <script src="js/main.js"></script>
 </body>
